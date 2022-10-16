@@ -12,8 +12,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Repository: [GitHub](https://github.com/vrroel/frontendmentor14.faq-accordion-card-main)
+- Live Site URL: [GitHub Pages](https://vrroel.github.io/frontendmentor14.faq-accordion-card-main/)
 
 ### Built with
 
