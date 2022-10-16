@@ -1,0 +1,248 @@
+:root {
+  /* text */
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  /* Background gradient */
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  /* text */
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+  /* dividers */
+  --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+body,
+p,
+h1,
+dl,
+dt,
+dd,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  height: 100%;
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+  background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--very-dark-grayish-blue);
+  overflow-y: scroll;
+}
+
+.main {
+  padding: 9rem 1rem 1rem 1rem;
+}
+
+.grid-section {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid-template-rows: 1fr; */
+}
+
+.ilustrations {
+  height: 80px;
+}
+
+.desktop-img,
+.box-img {
+  display: none;
+}
+
+.ilustrations .mobile-img {
+  margin: 0 auto;
+  position: relative;
+  max-width: 230px;
+  top: -105px;
+  filter: drop-shadow(0px 30px 0px hsla(240, 73%, 65%, 0.1));
+}
+
+.faq {
+  padding: 3rem 1.5rem;
+}
+
+.faq .title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 2.5rem;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--dark-grayish-blue);
+  position: relative;
+}
+
+.faq-lista dt,
+.faq-lista dd {
+  line-height: 1.5;
+  display: grid;
+  grid-template-columns: 1fr 30px;
+  align-items: center;
+}
+
+.faq-lista dt {
+  margin: 0.8rem 0;
+  position: relative;
+}
+
+.faq-lista dt:hover {
+  color: var(--soft-red);
+  cursor: pointer;
+}
+
+.faq-lista dt::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 8px;
+  background-image: url(../images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+}
+
+.faq-lista dt.active::after {
+  animation: rotar 0.3s forwards;
+}
+
+.faq-lista dd {
+  opacity: 0;
+  height: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease-out;
+}
+
+.faq-lista dt.active {
+  font-weight: bold;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.faq-lista dd.active {
+  opacity: 1;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+@keyframes rotar {
+  from {
+    transform: rotateX(0);
+  }
+  to {
+    transform: rotatex(180deg);
+  }
+}
+
+/* inputs desactivados en el html */
+
+/* input {
+  position: absolute;
+  top: 0;
+  right: -2px;
+  cursor: pointer;
+  opacity: 0.5;
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked ~ dd {
+  opacity: 1;
+  height: auto;
+  margin-bottom: 1rem;
+} */
+
+/* inputs desactivados en el html */
+
+@media (min-width: 700px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-top: 4rem;
+    height: 100%;
+  }
+
+  .attribution {
+    margin-top: auto;
+  }
+
+  .main {
+    max-width: 800px;
+    padding: 0;
+    margin: 0rem auto 2rem auto;
+    position: relative;
+  }
+
+  .grid-section {
+    max-width: 800px;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    padding: 4rem 4rem 4rem 0px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .faq {
+    padding: initial;
+  }
+
+  .faq .title {
+    text-align: left;
+  }
+
+  .faq-lista dt::after {
+    padding-left: 10px;
+  }
+
+  /* input {
+    right: 8px;
+  } */
+
+  .ilustrations {
+    width: 100%;
+    height: initial;
+    position: relative;
+    align-self: start;
+    margin-left: -70px;
+  }
+
+  .mobile-img {
+    display: none;
+  }
+
+  .desktop-img {
+    display: block;
+    filter: drop-shadow(0px 80px hsla(240, 73%, 65%, 0.1));
+  }
+
+  .box-img {
+    display: block;
+    width: 180px;
+    position: absolute;
+    top: 161px;
+    left: -125px;
+    z-index: 1;
+  }
+
+  .ilustrations .mobile-img {
+    margin: 0 auto;
+    position: relative;
+    max-width: 230px;
+    top: -105px;
+    filter: drop-shadow(0px 30px 0px hsla(240, 73%, 65%, 0.1));
+  }
+}
